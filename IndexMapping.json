@@ -1,0 +1,1080 @@
+{
+	"settings": {
+		"analysis": {
+			"filter": {
+				"englishStopwords": {
+					"type": "stop",
+					"stopwords": [
+						"_english_"
+					]
+				},
+				"englishStemmer": {
+					"type": "stemmer",
+					"language": "english"
+				},
+				"germanStopwords": {
+					"type": "stop",
+					"stopwords": [
+						"_german_"
+					]
+				},
+				"germanStemmer": {
+					"type": "stemmer",
+					"language": "german"
+				},
+				"spanishStopwords": {
+					"type": "stop",
+					"stopwords": [
+						"_spanish_"
+					]
+				},
+				"spanishStemmer": {
+					"type": "stemmer",
+					"language": "spanish"
+				},
+				"prBrazilStopwords": {
+					"type": "stop",
+					"stopwords": [
+						"_brazilian_"
+					]
+				},
+				"prBrazilStemmer": {
+					"type": "stemmer",
+					"language": "brazilian"
+				},
+				"italianStopwords": {
+					"type": "stop",
+					"stopwords": [
+						"_italian_"
+					]
+				},
+				"italianStemmer": {
+					"type": "stemmer",
+					"language": "italian"
+				},
+				"frenchStopwords": {
+					"type": "stop",
+					"stopwords": [
+						"_french_"
+					]
+				},
+				"frenchStemmer": {
+					"type": "stemmer",
+					"language": "french"
+				},
+				"norwegianStopwords": {
+					"type": "stop",
+					"stopwords": [
+						"_norwegian_"
+					]
+				},
+				"norwegianStemmer": {
+					"type": "stemmer",
+					"language": "norwegian"
+				},
+				"dutchStopwords": {
+					"type": "stop",
+					"stopwords": [
+						"_dutch_"
+					]
+				},
+				"dutchStemmer": {
+					"type": "stemmer",
+					"language": "dutch"
+				},
+				"autocompleteShingleFilter": {
+					"max_shingle_size": "3",
+					"min_shingle_size": "2",
+					"type": "shingle",
+					"filler_token": "",
+					"output_unigrams": "false",
+					"output_unigrams_if_no_shingles": "true"
+				},
+				"queryShingleFilter": {
+					"max_shingle_size": "4",
+					"min_shingle_size": "2",
+					"type": "shingle",
+					"filler_token": ""
+				},
+				"autocompleteFilter": {
+					"type": "edge_ngram",
+					"min_gram": "2",
+					"max_gram": "20"
+				}
+			},
+			"analyzer": {
+				"englishAutocomplete": {
+					"filter": [
+						"lowercase",
+						"englishStopwords",
+						"autocompleteFilter",
+						"englishStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"englishAutocompleteShingle": {
+					"filter": [
+						"lowercase",
+						"englishStopwords",
+						"englishStemmer",
+						"autocompleteShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"englishQueryShingleAnalyzer": {
+					"filter": [
+						"lowercase",
+						"englishStopwords",
+						"englishStemmer",
+						"queryShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"englishDefaultAnalyzer": {
+					"filter": [
+						"lowercase",
+						"englishStopwords",
+						"englishStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"englishExactMatchAnalyzer": {
+					"filter": [
+						"lowercase",
+						"englishStopwords"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+
+				"germanAutocomplete": {
+					"filter": [
+						"lowercase",
+						"germanStopwords",
+						"autocompleteFilter",
+						"germanStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"germanAutocompleteShingle": {
+					"filter": [
+						"lowercase",
+						"germanStopwords",
+						"germanStemmer",
+						"autocompleteShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"germanQueryShingleAnalyzer": {
+					"filter": [
+						"lowercase",
+						"germanStopwords",
+						"germanStemmer",
+						"queryShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"germanDefaultAnalyzer": {
+					"filter": [
+						"lowercase",
+						"germanStopwords",
+						"germanStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"germanExactMatchAnalyzer": {
+					"filter": [
+						"lowercase",
+						"germanStopwords"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+
+				"spanishAutocomplete": {
+					"filter": [
+						"lowercase",
+						"spanishStopwords",
+						"autocompleteFilter",
+						"spanishStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"spanishAutocompleteShingle": {
+					"filter": [
+						"lowercase",
+						"spanishStopwords",
+						"spanishStemmer",
+						"autocompleteShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"spanishQueryShingleAnalyzer": {
+					"filter": [
+						"lowercase",
+						"spanishStopwords",
+						"spanishStemmer",
+						"queryShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"spanishDefaultAnalyzer": {
+					"filter": [
+						"lowercase",
+						"spanishStopwords",
+						"spanishStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"spanishExactMatchAnalyzer": {
+					"filter": [
+						"lowercase",
+						"spanishStopwords"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+
+				"prBrazilAutocomplete": {
+					"filter": [
+						"lowercase",
+						"prBrazilStopwords",
+						"autocompleteFilter",
+						"prBrazilStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"prBrazilAutocompleteShingle": {
+					"filter": [
+						"lowercase",
+						"prBrazilStopwords",
+						"prBrazilStemmer",
+						"autocompleteShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"prBrazilQueryShingleAnalyzer": {
+					"filter": [
+						"lowercase",
+						"prBrazilStopwords",
+						"prBrazilStemmer",
+						"queryShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"prBrazilDefaultAnalyzer": {
+					"filter": [
+						"lowercase",
+						"prBrazilStopwords",
+						"prBrazilStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"prBrazilExactMatchAnalyzer": {
+					"filter": [
+						"lowercase",
+						"prBrazilStopwords"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+
+				"italianAutocomplete": {
+					"filter": [
+						"lowercase",
+						"italianStopwords",
+						"autocompleteFilter",
+						"italianStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"italianAutocompleteShingle": {
+					"filter": [
+						"lowercase",
+						"italianStopwords",
+						"italianStemmer",
+						"autocompleteShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"italianQueryShingleAnalyzer": {
+					"filter": [
+						"lowercase",
+						"italianStopwords",
+						"italianStemmer",
+						"queryShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"italianDefaultAnalyzer": {
+					"filter": [
+						"lowercase",
+						"italianStopwords",
+						"italianStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"italianExactMatchAnalyzer": {
+					"filter": [
+						"lowercase",
+						"italianStopwords"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+
+				"frenchAutocomplete": {
+					"filter": [
+						"lowercase",
+						"frenchStopwords",
+						"autocompleteFilter",
+						"frenchStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"frenchAutocompleteShingle": {
+					"filter": [
+						"lowercase",
+						"frenchStopwords",
+						"frenchStemmer",
+						"autocompleteShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"frenchQueryShingleAnalyzer": {
+					"filter": [
+						"lowercase",
+						"frenchStopwords",
+						"frenchStemmer",
+						"queryShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"frenchDefaultAnalyzer": {
+					"filter": [
+						"lowercase",
+						"frenchStopwords",
+						"frenchStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"frenchExactMatchAnalyzer": {
+					"filter": [
+						"lowercase",
+						"frenchStopwords"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+
+				"norwegianAutocomplete": {
+					"filter": [
+						"lowercase",
+						"norwegianStopwords",
+						"autocompleteFilter",
+						"norwegianStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"norwegianAutocompleteShingle": {
+					"filter": [
+						"lowercase",
+						"norwegianStopwords",
+						"norwegianStemmer",
+						"autocompleteShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"norwegianQueryShingleAnalyzer": {
+					"filter": [
+						"lowercase",
+						"norwegianStopwords",
+						"norwegianStemmer",
+						"queryShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"norwegianDefaultAnalyzer": {
+					"filter": [
+						"lowercase",
+						"norwegianStopwords",
+						"norwegianStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"norwegianExactMatchAnalyzer": {
+					"filter": [
+						"lowercase",
+						"norwegianStopwords"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+
+				"dutchAutocomplete": {
+					"filter": [
+						"lowercase",
+						"dutchStopwords",
+						"autocompleteFilter",
+						"dutchStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"dutchAutocompleteShingle": {
+					"filter": [
+						"lowercase",
+						"dutchStopwords",
+						"dutchStemmer",
+						"autocompleteShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"dutchQueryShingleAnalyzer": {
+					"filter": [
+						"lowercase",
+						"dutchStopwords",
+						"dutchStemmer",
+						"queryShingleFilter"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"dutchDefaultAnalyzer": {
+					"filter": [
+						"lowercase",
+						"dutchStopwords",
+						"dutchStemmer"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+				"dutchExactMatchAnalyzer": {
+					"filter": [
+						"lowercase",
+						"dutchStopwords"
+					],
+					"type": "custom",
+					"tokenizer": "standard"
+				},
+
+				"uaxUrlEmailAnalyzer": {
+					"tokenizer": "uax_url_email"
+				}
+			}
+		},
+		"index": {
+			"number_of_shards": 3,
+			"number_of_replicas": 2,
+			"mapping.total_fields.limit": 100000
+		}
+	},
+	"mappings": {
+			"dynamic_templates": [{
+				"locale_titles": {
+					"mapping": {
+						"type": "text",
+						"analyzer": "englishAutocomplete",
+						"search_analyzer": "englishQueryShingleAnalyzer",
+						"fields": {
+							"keyword": {
+								"type": "keyword"
+							},
+							"shingles": {
+								"type": "text",
+								"analyzer": "englishAutocompleteShingle"
+							},
+							"exactMatch": {
+								"type": "text",
+								"analyzer": "englishExactMatchAnalyzer"
+							}
+						}
+					},
+					"match": "locale_*_title",
+					"match_mapping_type": "string"
+				}
+			},
+				{
+					"locale_descriptions": {
+						"mapping": {
+							"type": "text",
+							"analyzer": "englishDefaultAnalyzer",
+							"search_analyzer": "englishQueryShingleAnalyzer",
+							"fields": {
+								"shingles": {
+									"type": "text",
+									"analyzer": "englishAutocompleteShingle"
+								},
+								"exactMatch": {
+									"type": "text",
+									"analyzer": "englishExactMatchAnalyzer"
+								}
+							}
+						},
+						"match": "locale_*_description",
+						"match_mapping_type": "string"
+					}
+				},
+				{
+					"locale_footnotes": {
+						"mapping": {
+							"type": "text",
+							"analyzer": "englishDefaultAnalyzer"
+						},
+						"match": "locale_*_footnote",
+						"match_mapping_type": "string"
+					}
+				},
+				{
+					"locale_step_notes": {
+						"mapping": {
+							"type": "text",
+							"analyzer": "englishDefaultAnalyzer"
+						},
+						"match": "locale_*_step_note",
+						"match_mapping_type": "string"
+					}
+				},
+				{
+					"locale_step_descriptions": {
+						"mapping": {
+							"type": "text",
+							"analyzer": "englishDefaultAnalyzer",
+							"search_analyzer": "englishQueryShingleAnalyzer",
+							"fields": {
+								"shingles": {
+									"type": "text",
+									"analyzer": "englishAutocompleteShingle"
+								}
+							}
+						},
+						"match": "locale_*_step_description",
+						"match_mapping_type": "string"
+					}
+				},
+				{
+					"locale_search_keywords": {
+						"mapping": {
+							"type": "text"
+						},
+						"match": "locale_*_search_keywords",
+						"match_mapping_type": "string"
+					}
+				}
+			],
+			"properties": {
+				"url": {
+					"type": "text",
+					"analyzer": "uaxUrlEmailAnalyzer"
+				},
+				"tags": {
+					"type": "keyword"
+				},
+				"title": {
+					"type": "text",
+					"analyzer": "englishAutocomplete",
+					"search_analyzer": "englishQueryShingleAnalyzer",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						},
+						"shingles": {
+							"type": "text",
+							"analyzer": "englishAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "englishExactMatchAnalyzer"
+						}
+					}
+				},
+				"type": {
+					"type": "keyword"
+				},
+				"description": {
+					"type": "text",
+					"analyzer": "englishDefaultAnalyzer",
+					"search_analyzer": "englishQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "englishAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "englishExactMatchAnalyzer"
+						}
+					}
+				},
+				"footnote": {
+					"type": "text",
+					"analyzer": "englishDefaultAnalyzer"
+				},
+				"host": {
+					"type": "text",
+					"fields": {
+						"uax_url_email": {
+							"type": "text",
+							"analyzer": "uaxUrlEmailAnalyzer"
+						}
+					}
+				},
+				"published_at": {
+					"type": "date",
+					"format": "epoch_millis"
+				},
+				"source": {
+					"type": "integer"
+				},
+				"design_stage": {
+					"type": "integer"
+				},
+				"update_time": {
+					"type": "date",
+					"format": "epoch_millis"
+				},
+				"page_content": {
+					"type": "text",
+					"analyzer": "englishQueryShingleAnalyzer",
+					"fields": {
+							"shingles": {
+								"type": "text",
+								"analyzer": "englishAutocompleteShingle"
+							},
+							"exactMatch": {
+								"type": "text",
+								"analyzer": "englishExactMatchAnalyzer"
+							}
+						}
+				},
+				"index_type": {
+					"type": "keyword"
+				},
+				"ent_id": {
+					"type": "keyword"
+				},
+				"author": {
+					"type": "keyword"
+				},
+				"search_keywords": {
+					"type": "text"
+				},
+				"step_description": {
+					"type": "text",
+					"analyzer": "englishDefaultAnalyzer",
+					"search_analyzer": "englishQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "englishAutocompleteShingle"
+						}
+					}
+				},
+				"step_note": {
+					"type": "text",
+					"analyzer": "englishDefaultAnalyzer",
+					"search_analyzer": "englishQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "englishAutocompleteShingle"
+						}
+					}
+				},
+				"raw": {
+					"type": "object",
+					"enabled": false
+				},
+				"locale_de_title": {
+					"type": "text",
+					"analyzer": "germanAutocomplete",
+					"search_analyzer": "germanQueryShingleAnalyzer",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						},
+						"shingles": {
+							"type": "text",
+							"analyzer": "germanAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "germanExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_de_description": {
+					"type": "text",
+					"analyzer": "germanDefaultAnalyzer",
+					"search_analyzer": "germanQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "germanAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "germanExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_de_footnote": {
+					"type": "text",
+					"analyzer": "germanDefaultAnalyzer"
+				},
+				"locale_de_step_note": {
+					"type": "text",
+					"analyzer": "germanDefaultAnalyzer"
+				},
+				"locale_de_step_description": {
+					"type": "text",
+					"analyzer": "germanDefaultAnalyzer",
+					"search_analyzer": "germanQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "germanAutocompleteShingle"
+						}
+					}
+				},
+
+
+				"locale_es_title": {
+					"type": "text",
+					"analyzer": "spanishAutocomplete",
+					"search_analyzer": "spanishQueryShingleAnalyzer",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						},
+						"shingles": {
+							"type": "text",
+							"analyzer": "spanishAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "spanishExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_es_description": {
+					"type": "text",
+					"analyzer": "spanishDefaultAnalyzer",
+					"search_analyzer": "spanishQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "spanishAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "spanishExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_es_footnote": {
+					"type": "text",
+					"analyzer": "spanishDefaultAnalyzer"
+				},
+				"locale_es_step_note": {
+					"type": "text",
+					"analyzer": "spanishDefaultAnalyzer"
+				},
+				"locale_es_step_description": {
+					"type": "text",
+					"analyzer": "spanishDefaultAnalyzer",
+					"search_analyzer": "spanishQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "spanishAutocompleteShingle"
+						}
+					}
+				},
+
+				"locale_ptbr_title": {
+					"type": "text",
+					"analyzer": "prBrazilAutocomplete",
+					"search_analyzer": "prBrazilQueryShingleAnalyzer",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						},
+						"shingles": {
+							"type": "text",
+							"analyzer": "prBrazilAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "prBrazilExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_ptbr_description": {
+					"type": "text",
+					"analyzer": "prBrazilDefaultAnalyzer",
+					"search_analyzer": "prBrazilQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "prBrazilAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "prBrazilExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_ptbr_footnote": {
+					"type": "text",
+					"analyzer": "prBrazilDefaultAnalyzer"
+				},
+				"locale_ptbr_step_note": {
+					"type": "text",
+					"analyzer": "prBrazilDefaultAnalyzer"
+				},
+				"locale_ptbr_step_description": {
+					"type": "text",
+					"analyzer": "prBrazilDefaultAnalyzer",
+					"search_analyzer": "prBrazilQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "prBrazilAutocompleteShingle"
+						}
+					}
+				},
+
+				"locale_it_title": {
+					"type": "text",
+					"analyzer": "italianAutocomplete",
+					"search_analyzer": "italianQueryShingleAnalyzer",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						},
+						"shingles": {
+							"type": "text",
+							"analyzer": "italianAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "italianExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_it_description": {
+					"type": "text",
+					"analyzer": "italianDefaultAnalyzer",
+					"search_analyzer": "italianQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "italianAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "italianExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_it_footnote": {
+					"type": "text",
+					"analyzer": "italianDefaultAnalyzer"
+				},
+				"locale_it_step_note": {
+					"type": "text",
+					"analyzer": "italianDefaultAnalyzer"
+				},
+				"locale_it_step_description": {
+					"type": "text",
+					"analyzer": "italianDefaultAnalyzer",
+					"search_analyzer": "italianQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "italianAutocompleteShingle"
+						}
+					}
+				},
+
+
+				"locale_fr_title": {
+					"type": "text",
+					"analyzer": "frenchAutocomplete",
+					"search_analyzer": "frenchQueryShingleAnalyzer",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						},
+						"shingles": {
+							"type": "text",
+							"analyzer": "frenchAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "frenchExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_fr_description": {
+					"type": "text",
+					"analyzer": "frenchDefaultAnalyzer",
+					"search_analyzer": "frenchQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "frenchAutocompleteShingle"
+						},"exactMatch": {
+							"type": "text",
+							"analyzer": "frenchExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_fr_footnote": {
+					"type": "text",
+					"analyzer": "frenchDefaultAnalyzer"
+				},
+				"locale_fr_step_note": {
+					"type": "text",
+					"analyzer": "frenchDefaultAnalyzer"
+				},
+				"locale_fr_step_description": {
+					"type": "text",
+					"analyzer": "frenchDefaultAnalyzer",
+					"search_analyzer": "frenchQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "frenchAutocompleteShingle"
+						}
+					}
+				},
+
+
+				"locale_no_title": {
+					"type": "text",
+					"analyzer": "norwegianAutocomplete",
+					"search_analyzer": "norwegianQueryShingleAnalyzer",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						},
+						"shingles": {
+							"type": "text",
+							"analyzer": "norwegianAutocompleteShingle"
+						},
+						"exactMatch": {
+							"type": "text",
+							"analyzer": "norwegianExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_no_description": {
+					"type": "text",
+					"analyzer": "norwegianDefaultAnalyzer",
+					"search_analyzer": "norwegianQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "norwegianAutocompleteShingle"
+						},
+						"exactMatch": {
+							"type": "text",
+							"analyzer": "norwegianExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_no_footnote": {
+					"type": "text",
+					"analyzer": "norwegianDefaultAnalyzer"
+				},
+				"locale_no_step_note": {
+					"type": "text",
+					"analyzer": "norwegianDefaultAnalyzer"
+				},
+				"locale_no_step_description": {
+					"type": "text",
+					"analyzer": "norwegianDefaultAnalyzer",
+					"search_analyzer": "norwegianQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "norwegianAutocompleteShingle"
+						}
+					}
+				},
+
+				"locale_nl_title": {
+					"type": "text",
+					"analyzer": "dutchAutocomplete",
+					"search_analyzer": "dutchQueryShingleAnalyzer",
+					"fields": {
+						"keyword": {
+							"type": "keyword"
+						},
+						"shingles": {
+							"type": "text",
+							"analyzer": "dutchAutocompleteShingle"
+						},
+						"exactMatch": {
+							"type": "text",
+							"analyzer": "dutchExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_nl_description": {
+					"type": "text",
+					"analyzer": "dutchDefaultAnalyzer",
+					"search_analyzer": "dutchQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "dutchAutocompleteShingle"
+						},
+						"exactMatch": {
+							"type": "text",
+							"analyzer": "dutchExactMatchAnalyzer"
+						}
+					}
+				},
+				"locale_nl_footnote": {
+					"type": "text",
+					"analyzer": "dutchDefaultAnalyzer"
+				},
+				"locale_nl_step_note": {
+					"type": "text",
+					"analyzer": "dutchDefaultAnalyzer"
+				},
+				"locale_nl_step_description": {
+					"type": "text",
+					"analyzer": "dutchDefaultAnalyzer",
+					"search_analyzer": "dutchQueryShingleAnalyzer",
+					"fields": {
+						"shingles": {
+							"type": "text",
+							"analyzer": "dutchAutocompleteShingle"
+						}
+					}
+				}
+			}
+	}
+}

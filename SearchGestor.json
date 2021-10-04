@@ -1,0 +1,26 @@
+{
+  "direct": [
+    {
+      "clz": "co.quicko.api.search.elastic.v6_4_2.SearchDAO",
+      "name": "elastic",
+      "environment": {
+        "text_fields": "locale_*_title,locale_*_description,locale_*_footnote,locale_*_step_*_note,locale_*_step_*_description,step_*_description,step_*_note,locale_*_step_note,locale_*_step_description,step_description,step_note,url,tags,title,type,description,footnote,host,page_content,index_type,name,author,search_keywords,locale_*_search_keywords",
+        "non_text_fields": "published_at,source,update_time,stage,design_stage",
+        "boost.template.locale_*_title": "^800;.keyword^900;.shingles^1000;.exactMatch^6000;",
+        "boost.template.locale_*_description": "^50;.keyword^60;.shingles^70;.exactMatch^2500;",
+        "boost.template.locale_*_footnote": "^20;.keyword^30;",
+        "boost.template.locale_*_step_note": "^20;.keyword^30;",
+        "boost.template.locale_*_step_description": "^20;.keyword^30;.shingles^40;",
+        "boost.template.step_description": "^20;.keyword^30;.shingles^40;",
+        "boost.template.step_note": "^20;.keyword^30;.shingles^40;",
+        "boost.property.title": "^800;.keyword^900;.shingles^1000;.exactMatch^6000;",
+        "boost.property.name": "^20;.keyword^30;.shingles^40;",
+        "boost.property.description": "^50;.keyword^60;.shingles^70;.exactMatch^2500;",
+        "boost.property.host": "^40;",
+        "boost.property.search_keywords" : "^6000;",
+        "boost.template.locale_*_search_keywords" :"^6000;",
+        "boost.template.page_content": "^50;.shingles^70;.exactMatch^2500"
+      }
+    },
+  ]
+}
